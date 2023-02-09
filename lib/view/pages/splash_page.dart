@@ -1,6 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:coaching/view/constant/app_style.dart';
 import 'package:coaching/view/constant/assets.dart';
 import 'package:flutter/material.dart';
+
+import '../router/app_router.gr.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -83,16 +86,21 @@ class SplashPage extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              Container(
-                height: 70,
-                decoration: BoxDecoration(
-                  color: actionColor,
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                child: Center(
-                  child: Text(
-                    "Geting Started",
-                    style: kBold.copyWith(color: bodyColor),
+              GestureDetector(
+                onTap: () {
+                  context.pushRoute(const HomeRoute());
+                },
+                child: Container(
+                  height: 70,
+                  decoration: BoxDecoration(
+                    color: actionColor,
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Geting Started",
+                      style: kBold.copyWith(color: bodyColor),
+                    ),
                   ),
                 ),
               ),

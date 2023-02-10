@@ -1,3 +1,5 @@
+import 'package:coaching/view/components/coursecard.dart';
+import 'package:coaching/view/components/coursecategory.dart';
 import 'package:coaching/view/components/mentorcard.dart';
 import 'package:coaching/view/constant/app_style.dart';
 import 'package:flutter/material.dart';
@@ -94,7 +96,63 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                )
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Courses",
+                      style: kBold.copyWith(color: actionColor, fontSize: 25),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Popular",
+                          style:
+                              kBold.copyWith(color: actionColor, fontSize: 15),
+                        ),
+                        const Icon(Icons.arrow_drop_down_rounded)
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(right: 10),
+                        child: CourseCategory(
+                            type: ButtonType.selected, text: "Design"),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 10),
+                        child: CourseCategory(
+                            type: ButtonType.notselected, text: "Coding"),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 10),
+                        child: CourseCategory(
+                            type: ButtonType.notselected, text: "Development"),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 10),
+                        child: CourseCategory(
+                            type: ButtonType.notselected, text: "Python"),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                CourseCard()
               ],
             ),
           ),

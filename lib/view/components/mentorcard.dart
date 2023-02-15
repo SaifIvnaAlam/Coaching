@@ -68,7 +68,7 @@ class MentorCard extends StatelessWidget {
                                 bottomLeft: Radius.circular(15),
                               ),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Icon(Icons.arrow_forward),
                             ),
                           ),

@@ -31,10 +31,10 @@ class SplashPage extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 100,
+                height: 50,
               ),
               Image.network(
-                reading,
+                "https://static.vecteezy.com/system/resources/previews/006/631/150/non_2x/woman-reading-book-girl-holding-textbook-illustration-in-flat-style-literacy-day-concept-vector.jpg",
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

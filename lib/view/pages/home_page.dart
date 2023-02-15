@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:coaching/view/components/coursecard.dart';
 import 'package:coaching/view/components/coursecategory.dart';
 import 'package:coaching/view/components/mentorcard.dart';
 import 'package:coaching/view/constant/app_style.dart';
+import 'package:coaching/view/router/app_router.gr.dart';
 import 'package:flutter/material.dart';
 
 import '../components/searchtextfield.dart';
@@ -90,9 +92,14 @@ class HomePage extends StatelessWidget {
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: 4,
-                      itemBuilder: (context, index) => const Padding(
+                      itemBuilder: (context, index) => Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: MentorCard(),
+                        child: GestureDetector(
+                          onTap: () {
+                            context.pushRoute(const MentorRoute());
+                          },
+                          child: MentorCard(),
+                        ),
                       ),
                     ),
                   ),
@@ -149,10 +156,31 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                CourseCard()
+                Expanded(
+                  child: SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: Column(children: const [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: CourseCard(),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: CourseCard(),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: CourseCard(),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: CourseCard(),
+                        ),
+                      ])),
+                )
               ],
             ),
           ),

@@ -1,16 +1,8 @@
-# coaching
+# Coaching Application
 
-A new Flutter project.
+Tutoring application Ui
 
-## Getting Started
+## App Screenshots
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1676033800](https://user-images.githubusercontent.com/73099787/219047352-eaa02f08-103a-4922-a4bf-fbe172ae2d93.png)
+![Screenshot_1676033804](https://user-images.githubusercontent.com/73099787/219047482-d47ac53b-d38d-4dbf-b73f-ccc7442900aa.png)
